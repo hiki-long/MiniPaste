@@ -654,6 +654,7 @@ namespace CutPicture
                     }
                 }
                 read.Close();
+                read.Dispose();
             }
             else
                 File.Create(file);
@@ -687,6 +688,7 @@ namespace CutPicture
         private void AppExit(object sender, EventArgs e)
         {
             this.Close();
+            this.Dispose();
         }
 
         #endregion

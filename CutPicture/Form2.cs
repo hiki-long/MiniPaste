@@ -195,6 +195,7 @@ namespace CutPicture
             if (e.Button == MouseButtons.Right)
             {
                 this.Close();
+                this.Dispose();
             }
             else if (e.Button == MouseButtons.Middle)
             {
@@ -228,14 +229,6 @@ namespace CutPicture
             if (leftFlag)
             {
                 leftFlag = false;//释放鼠标后标注为false;
-            }
-        }
-
-        private void Form2_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                this.Close();
             }
         }
 
@@ -422,6 +415,7 @@ namespace CutPicture
                     break;
             }
             this.Close();
+            this.Dispose();
         }
 
         private void ScalingStripMenuItem1_Click(object sender, EventArgs e)
@@ -559,6 +553,7 @@ namespace CutPicture
 
             }
             read.Close();
+            read.Dispose();
             StreamWriter sw = new StreamWriter(@"/cutimage/分组" + src + ".txt", false);
             sw.WriteLine("");
             foreach (var str in strlines)
@@ -599,6 +594,7 @@ namespace CutPicture
             else if (e.Control && e.KeyCode == Keys.Escape)
             {
                 this.Close();
+                this.Dispose();
             }
             else if (e.KeyCode == Keys.Escape)
             {
@@ -619,6 +615,7 @@ namespace CutPicture
                     n++;
             }
             read.Close();
+            read.Dispose();
             return n;
         }
 
