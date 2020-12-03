@@ -72,7 +72,7 @@ namespace CutPicture
             this.Show();
         }
 
-        public Form2(Bitmap img, Rectangle rec, int gr,string str)
+        public Form2(Bitmap img, Rectangle rec, int gr, string str)
         {
             InitializeComponent();
             group = gr;
@@ -500,7 +500,7 @@ namespace CutPicture
         {
             if (group != 1)
             {
-                Firstgr(group,1);
+                Firstgr(group, 1);
                 group = 1;
             }
         }
@@ -509,7 +509,7 @@ namespace CutPicture
         {
             if (group != 2)
             {
-                Firstgr(group,2);
+                Firstgr(group, 2);
                 group = 2;
             }
         }
@@ -518,11 +518,11 @@ namespace CutPicture
         {
             if (group != 3)
             {
-                Firstgr(group,3);
+                Firstgr(group, 3);
                 group = 3;
             }
         }
-        private void Firstgr(int src,int gr)
+        private void Firstgr(int src, int gr)
         {
             switch (src)
             {
@@ -571,7 +571,7 @@ namespace CutPicture
         private void MoveGroup(int gr)
         {
             StreamWriter sw1 = new StreamWriter(@"/cutimage/分组" + gr + ".txt", true);
-            record = record.Substring(0,record.IndexOf('{')) + this.Location + this.Size;
+            record = record.Substring(0, record.IndexOf('{')) + this.Location + this.Size;
             Console.WriteLine(record);
             sw1.WriteLine(record);
             sw1.Close();
@@ -592,7 +592,7 @@ namespace CutPicture
             {
                 Mirror(true);
             }
-            else if(e.KeyCode == Keys.D4)
+            else if (e.KeyCode == Keys.D4)
             {
                 Mirror(false);
             }
@@ -600,11 +600,11 @@ namespace CutPicture
             {
                 this.Close();
             }
-            else if(e.KeyCode == Keys.Escape)
+            else if (e.KeyCode == Keys.Escape)
             {
                 this.Hide();
             }
-            
+
         }
 
         private int ReadGroupNum(int i)

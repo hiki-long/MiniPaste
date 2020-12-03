@@ -58,7 +58,7 @@ namespace CutPicture
             // ToolStripMenuItem1
             // 
             this.ToolStripMenuItem1.Name = "ToolStripMenuItem1";
-            this.ToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItem1.Size = new System.Drawing.Size(131, 26);
             this.ToolStripMenuItem1.Text = "分组1";
             this.ToolStripMenuItem1.Click += new System.EventHandler(this.ToolStripMenuItem1_Click);
             // 
@@ -74,14 +74,14 @@ namespace CutPicture
             this.CloseStripMenuItem1,
             this.DestroyStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 216);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 186);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // CopyStripMenuItem1
             // 
             this.CopyStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("CopyStripMenuItem1.Image")));
             this.CopyStripMenuItem1.Name = "CopyStripMenuItem1";
-            this.CopyStripMenuItem1.Size = new System.Drawing.Size(214, 26);
+            this.CopyStripMenuItem1.Size = new System.Drawing.Size(157, 26);
             this.CopyStripMenuItem1.Text = "复制";
             this.CopyStripMenuItem1.Click += new System.EventHandler(this.CopyStripMenuItem1_Click);
             // 
@@ -89,7 +89,7 @@ namespace CutPicture
             // 
             this.SaveStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("SaveStripMenuItem1.Image")));
             this.SaveStripMenuItem1.Name = "SaveStripMenuItem1";
-            this.SaveStripMenuItem1.Size = new System.Drawing.Size(214, 26);
+            this.SaveStripMenuItem1.Size = new System.Drawing.Size(157, 26);
             this.SaveStripMenuItem1.Text = "另存为";
             this.SaveStripMenuItem1.Click += new System.EventHandler(this.SaveStripMenuItem1_Click);
             // 
@@ -103,7 +103,7 @@ namespace CutPicture
             this.S200StripMenuItem6});
             this.ScalingStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ScalingStripMenuItem1.Image")));
             this.ScalingStripMenuItem1.Name = "ScalingStripMenuItem1";
-            this.ScalingStripMenuItem1.Size = new System.Drawing.Size(214, 26);
+            this.ScalingStripMenuItem1.Size = new System.Drawing.Size(157, 26);
             this.ScalingStripMenuItem1.Text = "缩放";
             this.ScalingStripMenuItem1.Click += new System.EventHandler(this.ScalingStripMenuItem1_Click);
             // 
@@ -151,34 +151,34 @@ namespace CutPicture
             this.D100tripMenuItem10});
             this.DiaphaneityStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("DiaphaneityStripMenuItem1.Image")));
             this.DiaphaneityStripMenuItem1.Name = "DiaphaneityStripMenuItem1";
-            this.DiaphaneityStripMenuItem1.Size = new System.Drawing.Size(214, 26);
+            this.DiaphaneityStripMenuItem1.Size = new System.Drawing.Size(157, 26);
             this.DiaphaneityStripMenuItem1.Text = "透明度";
             // 
             // D10StripMenuItem7
             // 
             this.D10StripMenuItem7.Name = "D10StripMenuItem7";
-            this.D10StripMenuItem7.Size = new System.Drawing.Size(224, 26);
+            this.D10StripMenuItem7.Size = new System.Drawing.Size(132, 26);
             this.D10StripMenuItem7.Text = "10%";
             this.D10StripMenuItem7.Click += new System.EventHandler(this.D10StripMenuItem7_Click);
             // 
             // D30StripMenuItem8
             // 
             this.D30StripMenuItem8.Name = "D30StripMenuItem8";
-            this.D30StripMenuItem8.Size = new System.Drawing.Size(224, 26);
+            this.D30StripMenuItem8.Size = new System.Drawing.Size(132, 26);
             this.D30StripMenuItem8.Text = "30%";
             this.D30StripMenuItem8.Click += new System.EventHandler(this.D30StripMenuItem8_Click);
             // 
             // D50StripMenuItem9
             // 
             this.D50StripMenuItem9.Name = "D50StripMenuItem9";
-            this.D50StripMenuItem9.Size = new System.Drawing.Size(224, 26);
+            this.D50StripMenuItem9.Size = new System.Drawing.Size(132, 26);
             this.D50StripMenuItem9.Text = "50%";
             this.D50StripMenuItem9.Click += new System.EventHandler(this.D50StripMenuItem9_Click);
             // 
             // D100tripMenuItem10
             // 
             this.D100tripMenuItem10.Name = "D100tripMenuItem10";
-            this.D100tripMenuItem10.Size = new System.Drawing.Size(224, 26);
+            this.D100tripMenuItem10.Size = new System.Drawing.Size(132, 26);
             this.D100tripMenuItem10.Text = "100%";
             this.D100tripMenuItem10.Click += new System.EventHandler(this.D100tripMenuItem10_Click);
             // 
@@ -190,21 +190,21 @@ namespace CutPicture
             this.ToolStripMenuItem3});
             this.MoveStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("MoveStripMenuItem1.Image")));
             this.MoveStripMenuItem1.Name = "MoveStripMenuItem1";
-            this.MoveStripMenuItem1.Size = new System.Drawing.Size(214, 26);
+            this.MoveStripMenuItem1.Size = new System.Drawing.Size(157, 26);
             this.MoveStripMenuItem1.Text = "移动到分组";
             this.MoveStripMenuItem1.Click += new System.EventHandler(this.MoveStripMenuItem1_Click);
             // 
             // ToolStripMenuItem2
             // 
             this.ToolStripMenuItem2.Name = "ToolStripMenuItem2";
-            this.ToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItem2.Size = new System.Drawing.Size(131, 26);
             this.ToolStripMenuItem2.Text = "分组2";
             this.ToolStripMenuItem2.Click += new System.EventHandler(this.ToolStripMenuItem2_Click);
             // 
             // ToolStripMenuItem3
             // 
             this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
-            this.ToolStripMenuItem3.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItem3.Size = new System.Drawing.Size(131, 26);
             this.ToolStripMenuItem3.Text = "分组3";
             this.ToolStripMenuItem3.Click += new System.EventHandler(this.ToolStripMenuItem3_Click);
             // 
@@ -212,7 +212,7 @@ namespace CutPicture
             // 
             this.CloseStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("CloseStripMenuItem1.Image")));
             this.CloseStripMenuItem1.Name = "CloseStripMenuItem1";
-            this.CloseStripMenuItem1.Size = new System.Drawing.Size(214, 26);
+            this.CloseStripMenuItem1.Size = new System.Drawing.Size(157, 26);
             this.CloseStripMenuItem1.Text = "关闭";
             this.CloseStripMenuItem1.Click += new System.EventHandler(this.CloseStripMenuItem1_Click_1);
             // 
@@ -220,7 +220,7 @@ namespace CutPicture
             // 
             this.DestroyStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("DestroyStripMenuItem1.Image")));
             this.DestroyStripMenuItem1.Name = "DestroyStripMenuItem1";
-            this.DestroyStripMenuItem1.Size = new System.Drawing.Size(214, 26);
+            this.DestroyStripMenuItem1.Size = new System.Drawing.Size(157, 26);
             this.DestroyStripMenuItem1.Text = "销毁";
             this.DestroyStripMenuItem1.Click += new System.EventHandler(this.DestroyStripMenuItem1_Click);
             // 
@@ -234,6 +234,7 @@ namespace CutPicture
             this.Name = "Form2";
             this.Closed += new System.EventHandler(this.MyFormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseClick);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseMove);

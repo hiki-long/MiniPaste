@@ -52,7 +52,7 @@ namespace CutPicture
             cutState = eCutStatus.None;
             //zoom窗口
             zoomwin = new Form();
-            zoomwin.ClientSize = new Size(zoomwidth+2, zoomheight+2);
+            zoomwin.ClientSize = new Size(zoomwidth + 2, zoomheight + 2);
             zoomwin.FormBorderStyle = FormBorderStyle.None;
             zoomwin.StartPosition = FormStartPosition.Manual;
             zoomwin.TopMost = true;
@@ -93,7 +93,7 @@ namespace CutPicture
             if (!File.Exists(path + "/分组3.txt"))
                 File.Create(path + "/分组3.txt");
 
-            ReadFile(filepath,0); 
+            ReadFile(filepath, 0);
         }
 
         private void ValidHotKey()
@@ -111,14 +111,13 @@ namespace CutPicture
             if (exit)
             {
                 UnregisterHotKey(this.Handle, 10000);
-                UnregisterHotKey(this.Handle, 10006);
+                UnregisterHotKey(this.Handle, 10001);
                 UnregisterHotKey(this.Handle, 10006);
             }
             UnregisterHotKey(this.Handle, 10002);
             UnregisterHotKey(this.Handle, 10003);
             UnregisterHotKey(this.Handle, 10004);
             UnregisterHotKey(this.Handle, 10005);
-            UnregisterHotKey(this.Handle, 10006);
             UnregisterHotKey(this.Handle, 10007);
         }
 
@@ -136,7 +135,7 @@ namespace CutPicture
 
         protected override void WndProc(ref Message m)
         {
-            
+
             const int WM_HOTKEY = 0x0312;
             switch (m.Msg)
             {
@@ -152,7 +151,7 @@ namespace CutPicture
                     }
                     else if (m.WParam.ToString() == "10002")
                     {
-                        if(cutState == eCutStatus.End)
+                        if (cutState == eCutStatus.End)
                             CopyClip();
                     }
                     else if (m.WParam.ToString() == "10003")
@@ -181,22 +180,22 @@ namespace CutPicture
                         {
                             case 0:
                                 FrmClear();
-                                ReadFile(path+"/分组1.txt",1);
+                                ReadFile(path + "/分组1.txt", 1);
                                 break;
                             case 1:
-                                FrmClear(); 
-                                ReadFile(path+"/分组2.txt",2);
+                                FrmClear();
+                                ReadFile(path + "/分组2.txt", 2);
                                 break;
                             case 2:
                                 FrmClear();
-                                ReadFile(path+"/分组3.txt",3);
+                                ReadFile(path + "/分组3.txt", 3);
                                 break;
                         }
-                       
+
                     }
                     else if (m.WParam.ToString() == "10007")
                     {
-                        if(cutState == eCutStatus.End && usr.GetnowRect().Contains(MousePosition.X,MousePosition.Y))
+                        if (cutState == eCutStatus.End && usr.GetnowRect().Contains(MousePosition.X, MousePosition.Y))
                             GetPix(MousePosition.X, MousePosition.Y);
                     }
                     break;
@@ -220,7 +219,7 @@ namespace CutPicture
                 this.BackgroundImage = catchScreen;
                 this.screenImage = catchScreen;
                 this.TopMost = true;
-                if(show)
+                if (show)
                     this.Show();
             }
 
@@ -251,17 +250,17 @@ namespace CutPicture
 
         private void PasteImg(Rectangle temprec)
         {
-/*            if (Cursor.Position.X > temprec.Left && Cursor.Position.X < temprec.Right && Cursor.Position.Y > temprec.Top && Cursor.Position.Y < temprec.Bottom)
-            {
-                Bitmap cutPic = new Bitmap(temprec.Width, temprec.Height);
-                Graphics g = Graphics.FromImage(cutPic);
-                g.DrawImage(this.BackgroundImage, new Rectangle(0, 0, temprec.Width, temprec.Height), temprec, GraphicsUnit.Pixel);
-                frm = new Form2(cutPic, temprec,0);
-                frm.UpdateTextBox += Delfrm; //添加事件队列 (观察者模式)
-                frmlist.Add(frm);
-                g.Dispose();
-                cutPic.Dispose();
-            }*/
+            /*            if (Cursor.Position.X > temprec.Left && Cursor.Position.X < temprec.Right && Cursor.Position.Y > temprec.Top && Cursor.Position.Y < temprec.Bottom)
+                        {
+                            Bitmap cutPic = new Bitmap(temprec.Width, temprec.Height);
+                            Graphics g = Graphics.FromImage(cutPic);
+                            g.DrawImage(this.BackgroundImage, new Rectangle(0, 0, temprec.Width, temprec.Height), temprec, GraphicsUnit.Pixel);
+                            frm = new Form2(cutPic, temprec,0);
+                            frm.UpdateTextBox += Delfrm; //添加事件队列 (观察者模式)
+                            frmlist.Add(frm);
+                            g.Dispose();
+                            cutPic.Dispose();
+                        }*/
 
             Bitmap cutPic = new Bitmap(temprec.Width, temprec.Height);
             Graphics g = Graphics.FromImage(cutPic);
@@ -275,7 +274,7 @@ namespace CutPicture
         }
         private void SaveImage()
         {
-            if(this.Visible && this.usr.GetnowRect().Size != Size.Empty)
+            if (this.Visible && this.usr.GetnowRect().Size != Size.Empty)
             {
                 Rectangle temprec = usr.GetnowRect();
                 Bitmap cutPic = new Bitmap(temprec.Width, temprec.Height);
@@ -325,7 +324,7 @@ namespace CutPicture
 
         private void CopyClip()
         {//复制到剪切版
-            if(this.Visible && this.usr.GetnowRect().Size != Size.Empty)
+            if (this.Visible && this.usr.GetnowRect().Size != Size.Empty)
             {
                 Rectangle temprec = usr.GetnowRect();
                 Bitmap cutPic = new Bitmap(temprec.Width, temprec.Height);
@@ -347,13 +346,13 @@ namespace CutPicture
                 cutRect.Width = Math.Abs(record_x - cutRect.X);
                 cutRect.Height = Math.Abs(record_y - cutRect.Y);
                 int temp;
-                if(record_x < cutRect.X)
+                if (record_x < cutRect.X)
                 {
                     temp = cutRect.X;
                     cutRect.X = record_x;
                     record_x = temp;
                 }
-                if(record_y < cutRect.Y)
+                if (record_y < cutRect.Y)
                 {
                     temp = cutRect.Y;
                     cutRect.Y = record_y;
@@ -366,7 +365,7 @@ namespace CutPicture
                 Bitmap tempbit = (Bitmap)this.BackgroundImage.Clone();
                 using (Graphics g = Graphics.FromImage(tempbit))
                 {
-                    using(SolidBrush sb = new SolidBrush(Color.FromArgb(155, 0, 0, 0)))
+                    using (SolidBrush sb = new SolidBrush(Color.FromArgb(155, 0, 0, 0)))
                     {
                         g.FillRectangle(sb, 0, 0, pic.Width, pic.Height);
                     }
@@ -390,7 +389,6 @@ namespace CutPicture
             if (e.Button == MouseButtons.Right)
             {
                 EndCut();
-
             }
         }
 
@@ -400,10 +398,10 @@ namespace CutPicture
             PasteImg(temprec);
 
         }
-   
+
         private void pic_OnMouseMove(object sender, MouseEventArgs e)
         {
-            zoomwin.Location = new Point(MousePosition.X+15, MousePosition.Y+22);
+            zoomwin.Location = new Point(MousePosition.X + 15, MousePosition.Y + 22);
             Graphics g = pc.CreateGraphics();
             Rectangle rec = usr.GetnowRect();
             if (rec.Contains(new Point(MousePosition.X, MousePosition.Y)))
@@ -448,15 +446,15 @@ namespace CutPicture
                         zoomRect.X = 0;
                         zoomRect.Offset(0, 10);
                     }
-                    
+
                     SolidBrush brush = new SolidBrush(Color.FromArgb(155, 220, 20, 60));
                     Pen pen = new Pen(brush, 2.0F);
-                    g.DrawLine(pen, new Point(0, zoomheight / 2 + 1), new Point(zoomwidth+2, zoomheight / 2 + 1)); //加5解决放大镜准星和实际鼠标位置对不上的问题；
-                    g.DrawLine(pen, new Point(zoomwidth / 2 + 1,0), new Point(zoomwidth / 2+1, zoomheight+2));
-                    g.DrawRectangle(new Pen(new SolidBrush(Color.White)), new Rectangle(0,0, zoomwidth+2, zoomheight+2));
+                    g.DrawLine(pen, new Point(0, zoomheight / 2 + 1), new Point(zoomwidth + 2, zoomheight / 2 + 1)); //加5解决放大镜准星和实际鼠标位置对不上的问题；
+                    g.DrawLine(pen, new Point(zoomwidth / 2 + 1, 0), new Point(zoomwidth / 2 + 1, zoomheight + 2));
+                    g.DrawRectangle(new Pen(new SolidBrush(Color.White)), new Rectangle(0, 0, zoomwidth + 2, zoomheight + 2));
                     brush.Dispose();
                     pen.Dispose();
-                   /* zoomwin.Show();*/
+                    /* zoomwin.Show();*/
                 }
                 else
                 {
@@ -470,7 +468,7 @@ namespace CutPicture
             g.Dispose();
         }
 
-    protected override void OnMouseDoubleClick(MouseEventArgs e)
+        protected override void OnMouseDoubleClick(MouseEventArgs e)
         {
             base.OnMouseDoubleClick(e);
             if (e.X > cutRect.Left && e.X < cutRect.Right && e.Y > cutRect.Top && e.Y < cutRect.Bottom)
@@ -507,7 +505,7 @@ namespace CutPicture
                 cutRect.Height = 0;
                 record_x = 0;
                 record_y = 0;
-                
+
             }
         }
 
@@ -569,7 +567,7 @@ namespace CutPicture
                 //绘制放大镜中的图像
                 Size srcSize = new System.Drawing.Size((int)(this.zoomwidth / 10), (int)(this.zoomheight / 10));
                 Point srcPoint;
-                if(MousePosition.X >= 5 && MousePosition.Y >= 4 && MousePosition.X + srcSize.Width <= this.Width && MousePosition.Y + srcSize.Height <= this.Height)
+                if (MousePosition.X >= 5 && MousePosition.Y >= 4 && MousePosition.X + srcSize.Width <= this.Width && MousePosition.Y + srcSize.Height <= this.Height)
                 {//超出范围的暂时不做处理
                     srcPoint = new Point(MousePosition.X - 5, MousePosition.Y - 4);
                     Rectangle zoomRect = new Rectangle(0, 0, 10, 10);
@@ -594,13 +592,13 @@ namespace CutPicture
 
                     SolidBrush brush = new SolidBrush(Color.FromArgb(155, 220, 20, 60));
                     Pen pen = new Pen(brush, 2.0F);
-                    e.Graphics.DrawLine(pen, new Point(zoomLocation.X, zoomLocation.Y+zoomheight/2), new Point(zoomLocation.X+zoomwidth, zoomLocation.Y + zoomheight / 2)); //加5解决放大镜准星和实际鼠标位置对不上的问题；
-                    e.Graphics.DrawLine(pen, new Point(zoomLocation.X+zoomwidth/2, zoomLocation.Y), new Point(zoomLocation.X + zoomwidth / 2, zoomLocation.Y+zoomheight));
+                    e.Graphics.DrawLine(pen, new Point(zoomLocation.X, zoomLocation.Y + zoomheight / 2), new Point(zoomLocation.X + zoomwidth, zoomLocation.Y + zoomheight / 2)); //加5解决放大镜准星和实际鼠标位置对不上的问题；
+                    e.Graphics.DrawLine(pen, new Point(zoomLocation.X + zoomwidth / 2, zoomLocation.Y), new Point(zoomLocation.X + zoomwidth / 2, zoomLocation.Y + zoomheight));
                     e.Graphics.DrawRectangle(new Pen(new SolidBrush(Color.White)), new Rectangle(zoomLocation.X - 1, zoomLocation.Y - 1, zoomwidth + 2, zoomheight + 2));
                     brush.Dispose();
                     pen.Dispose();
                 }
-               
+
             }
         }
 
@@ -620,7 +618,7 @@ namespace CutPicture
             frmgroup.Clear();
         }
 
-        private void ReadFile(string file,int gr)
+        private void ReadFile(string file, int gr)
         {
             if (File.Exists(file))
             {
