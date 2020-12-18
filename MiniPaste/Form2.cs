@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CutPicture
+namespace MiniPaste
 {
     public partial class Form2 : Form
     {

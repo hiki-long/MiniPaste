@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace CutPicture
+namespace MiniPaste
 {
     public class UserRect
     {
@@ -21,7 +21,6 @@ namespace CutPicture
         private int sizeNodeRect = 5;
         private Bitmap mBmp = null;
         private PosSizableRect nodeSelected = PosSizableRect.None;
-        private int angle = 30;
 
         private enum PosSizableRect
         {

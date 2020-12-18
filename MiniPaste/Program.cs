@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CutPicture
+namespace MiniPaste
 {
     static class Program
     {
@@ -23,7 +23,7 @@ namespace CutPicture
             //第二个参数可以设置为产品的名称:Application.ProductName
 
             //每次启动应用程序，都会验证名称为SingletonWinAppMutex的互斥是否存在
-            Mutex mutex = new Mutex(false, "CutPicture", out createdNew);
+            Mutex mutex = new Mutex(false, "MiniPaste", out createdNew);
 
             //如果已运行，则在前端显示
             //createdNew == false，说明程序已运行

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6D95E3DA-EE84-434D-808D-B1716C2ADD4A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CutPicture</RootNamespace>
-    <AssemblyName>CutPicture</AssemblyName>
+    <RootNamespace>MiniPaste</RootNamespace>
+    <AssemblyName>MiniPaste</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -111,6 +111,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="CutPicture_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">

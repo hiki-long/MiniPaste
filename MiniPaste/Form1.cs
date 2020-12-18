@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 
 
-namespace CutPicture
+namespace MiniPaste
 {
     public partial class Form1 : Form
     {
@@ -79,6 +79,7 @@ namespace CutPicture
             //注册F1热键，此时只有该热键监听全局事件，其他的不进行注册，防止与windows快捷键进行冲突
             RegisterHotKey(this.Handle, 10000, (int)KeyModifier.None, (int)Keys.F1);
             RegisterHotKey(this.Handle, 10006, (int)KeyModifier.None, (int)Keys.F3);
+            RegisterHotKey(this.Handle, 10004, hotkey, (int)Keys.H);
 
             if (!Directory.Exists(@"/cutimage"))
             {
@@ -101,7 +102,7 @@ namespace CutPicture
             RegisterHotKey(this.Handle, 10001, hotkey, (int)Keys.T);
             RegisterHotKey(this.Handle, 10002, hotkey, (int)Keys.C);
             RegisterHotKey(this.Handle, 10003, hotkey, (int)Keys.S);
-            RegisterHotKey(this.Handle, 10004, hotkey, (int)Keys.H);
+            //RegisterHotKey(this.Handle, 10004, hotkey, (int)Keys.H);
             RegisterHotKey(this.Handle, 10005, (int)KeyModifier.Shift, (int)Keys.S);
             RegisterHotKey(this.Handle, 10007, (int)KeyModifier.None, (int)Keys.C);
         }
@@ -113,10 +114,11 @@ namespace CutPicture
                 UnregisterHotKey(this.Handle, 10000);
                 UnregisterHotKey(this.Handle, 10001);
                 UnregisterHotKey(this.Handle, 10006);
+                UnregisterHotKey(this.Handle, 10004);
             }
             UnregisterHotKey(this.Handle, 10002);
             UnregisterHotKey(this.Handle, 10003);
-            UnregisterHotKey(this.Handle, 10004);
+            //UnregisterHotKey(this.Handle, 10004);
             UnregisterHotKey(this.Handle, 10005);
             UnregisterHotKey(this.Handle, 10007);
         }

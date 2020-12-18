@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CutPicture
+namespace MiniPaste
 {
     partial class Form2
     {
